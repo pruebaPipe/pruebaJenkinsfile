@@ -19,16 +19,6 @@ pipeline {
                 }
             }
         }
-
-        stage ('Deploy') {
-            steps {
-				withMaven(maven: 'maven_actual'){
-                    sh 'mvn deploy'
-                    
-                }
-            }
-
-        }
 	
     }
 
