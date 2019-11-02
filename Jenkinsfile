@@ -4,10 +4,10 @@ pipeline {
 
     stages {
 
-        stage ('Build') {
+        stage ('Compile') {
             steps {
                 withMaven(maven: 'maven_actual') {
-                    sh 'mvn build'
+                    sh 'mvn compile'
                 }
             }
         }
