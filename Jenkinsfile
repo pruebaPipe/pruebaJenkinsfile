@@ -4,7 +4,15 @@ pipeline {
 
     stages {
 
-        stage ('Compile') {
+	    stage ('Mvn Install') {
+            steps {
+                withMaven(maven: 'maven_actual') {
+                    sh ' mvn install'
+                }
+            }
+        }
+	    
+        stage ('Sonar Scan') {
             steps {
                 withMaven(maven: 'maven_actual') {
                     sh ' mvn sonar:sonar'
@@ -18,22 +26,9 @@ pipeline {
                     sh 'mvn test'
                 }
             }
-        }
-	    
-	stage('Sonar analysis') {
-        
-        environment {
-        scannerhome = tool 'sonar mvn'
-        }
-        steps{
-        withSonarQubeEnv('SonarQubeServer') {
-          sh "${scannerHome}/bin/sonar-scanner"
-              
-          }
+        }        
           
-      }
-    }    
-	
+         
     }
 
 }
