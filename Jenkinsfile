@@ -19,15 +19,16 @@ pipeline {
                 }
             }
         }
+	    
 	stage('Sonar analysis') {
-        	environment {
-        	scannerhome = tool 'Sonar-Scanner'
+        
+        environment {
+        scannerhome = tool 'sonar mvn'
         }
-            steps{
-		//sh "scp -r ${'/home/andres/Documentos/sonar-runner-2.4/bin/sonar-project.properties'} ${'/home/andres/Documentos/Jenkins/jenkins/workspace/nodeInstall/'}" 
-		withSonarQubeEnv('SonarQubeServer') {
-		sh "${scannerHome}/bin/sonar-scanner"
-
+        steps{
+        withSonarQubeEnv('SonarQubeServer') {
+          sh "${scannerHome}/bin/sonar-scanner"
+              
           }
           
       }
