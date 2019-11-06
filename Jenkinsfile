@@ -11,16 +11,7 @@ pipeline {
                 }
             }
         }
-
-	            stage ('Test') {
-            steps {
-                withMaven(maven: 'maven_actual') {
-                    sh 'mvn test'
-                }
-            }
-        }
-	    
-	    
+/*	    
         stage ('Sonar Scan') {
             steps {
                 withMaven(maven: 'maven_actual') {
@@ -28,7 +19,7 @@ pipeline {
                 }
             }
         }
-        
+ */       
         
       stage('Sonar analysis') {
         
