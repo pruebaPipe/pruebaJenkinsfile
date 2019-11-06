@@ -7,7 +7,7 @@ pipeline {
         stage ('Compile') {
             steps {
                 withMaven(maven: 'maven_actual') {
-                    sh ' mvn compile'
+                    sh ' mvn sonar:sonar'
                 }
             }
         }
