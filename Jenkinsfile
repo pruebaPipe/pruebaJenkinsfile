@@ -24,7 +24,7 @@ pipeline {
         	scannerhome = tool 'Sonar-Scanner'
         }
             steps{
-		sh "scp -r ${'/home/andres/Documentos/sonar-runner-2.4/bin/sonar-project.properties'} ${'/home/andres/Documentos/Jenkins/jenkins/workspace/nodeInstall/'}" 
+		//sh "scp -r ${'/home/andres/Documentos/sonar-runner-2.4/bin/sonar-project.properties'} ${'/home/andres/Documentos/Jenkins/jenkins/workspace/nodeInstall/'}" 
 		withSonarQubeEnv('SonarQubeServer') {
 		sh "${scannerHome}/bin/sonar-scanner"
 
