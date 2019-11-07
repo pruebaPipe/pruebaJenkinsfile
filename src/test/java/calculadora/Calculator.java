@@ -12,7 +12,7 @@ class Calculator {
 		return i * j;
 	}
 
-	public static Object dividir(int i, int j) {
+	private static Object dividir(int i, int j) {
 		
 		if(j == 0) {
 			throw new IllegalArgumentException ("El divisor no puede ser 0, imagina las implicaciones!");
