@@ -1,7 +1,7 @@
 package calculadora;
 
 public class Calculator {
-
+	double resultado = 0;
 	public static Object sumar(int i, int j) {
 		
 		return i + j;
@@ -13,7 +13,7 @@ public class Calculator {
 	}
 
 	public static Object dividir(int i, int j) {
-		double resultado = 0;
+		
 		if(j == 0) {
 			System.out.println("Prueba buenas practicas Sonar");
 		}
