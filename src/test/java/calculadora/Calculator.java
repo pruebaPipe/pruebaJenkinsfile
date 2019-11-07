@@ -18,7 +18,7 @@ public class Calculator {
 			System.out.println("Prueba buenas practicas Sonar");
 		}
 		else {
-			double resultado = i/j
+			double resultado = i/j;
 		}
 		return resultado;
 	}
