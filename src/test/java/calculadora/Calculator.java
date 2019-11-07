@@ -15,7 +15,7 @@ public class Calculator {
 	public static Object dividir(int i, int j) {
 		
 		if(j == 0) {
-			trhrow new Ilegalargumentexception ("El divisor no puede ser 0, imagina las implicaciones!");
+			throw new Illegalargumentexception ("El divisor no puede ser 0, imagina las implicaciones!");
 		}
 		return i / j;
 	}
