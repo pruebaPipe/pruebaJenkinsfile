@@ -1,6 +1,6 @@
 package calculadora;
 
-public class Calculator {
+class Calculator {
 	
 	public static Object sumar(int i, int j) {
 		
