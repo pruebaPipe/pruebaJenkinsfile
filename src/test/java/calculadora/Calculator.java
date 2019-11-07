@@ -13,13 +13,14 @@ public class Calculator {
 	}
 
 	public static Object dividir(int i, int j) {
-		
+		double resultado = 0;
 		if(j == 0) {
 			System.out.println("Prueba buenas practicas Sonar");
 		}
 		else {
-		return i/j;
-		}	
+			double resultado = i/j
+		}
+		return resultado;
 	}
 
 	public static Object usToPe(int i) {
