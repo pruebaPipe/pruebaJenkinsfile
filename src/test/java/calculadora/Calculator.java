@@ -15,10 +15,7 @@ public class Calculator {
 	public static Object dividir(int i, int j) {
 		
 		if(j == 0) {
-			System.out.println("Prueba buenas practicas Sonar");
-		}
-		else {
-			double resultado = i/j;
+			trhrow new Ilegalargumentexception ("El divisor no puede ser 0, imagina las implicaciones!")
 		}
 		return resultado;
 	}
