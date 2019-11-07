@@ -17,8 +17,9 @@ public class Calculator {
 		if(j == 0) {
 			System.out.println("Prueba buenas practicas Sonar");
 		}
-		
+		else {
 		return i/j;
+		}	
 	}
 
 	public static Object usToPe(int i) {
