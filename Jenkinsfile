@@ -7,7 +7,7 @@ pipeline {
 	    stage ('Mvn Install') {
             steps {
                 withMaven(maven: 'maven_actual') {
-                    sh 'mvn -Djacoco.destFile=./coverage/jacoco.exec clean  install'
+                    sh 'mvn -Djacoco.destFile=./coverage/jacoco.exec clean org.jacoco:jacoco-maven-plugin:0.8.2:prepare-agent install'
                 }
             }
         }
