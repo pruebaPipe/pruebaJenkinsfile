@@ -15,7 +15,7 @@ public class Calculator {
 	public static Object dividir(int i, int j) {
 		
 		if(j == 0) {
-			System.out.println("eerror paila");
+			System.out.println("Prueba buenas practicas Sonar");
 		}
 		
 		return i/j;
